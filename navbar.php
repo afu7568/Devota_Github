@@ -5,7 +5,7 @@ also is used to log out. The links displayed will depend on whether you are logg
 <div class="row">
 
   <!-- Navbar style is set to light as it fit with the style of my site, and allows for the navbar collapse image to be visible-->
-  <nav class='navbar navbar-light navbar-expand-lg col-12 custom-nav position-fixed'>
+  <nav class='navbar navbar-light navbar-expand-lg col-12 custom-nav position-fixed my-3'>
 
     <!--Displays logo-->
     <a class="" href="index.php"><img class='mx-4' src="img/logo.png" height="100%" width="50px"></a>
@@ -19,24 +19,28 @@ also is used to log out. The links displayed will depend on whether you are logg
       <!--List of navbar items on the left side-->
       <ul class="navbar-nav mr-auto">
         <li class='nav-item '>
-          <a class='nav-link p-3 my-2 px-5 btn-outline-light' href='index.php'>Home</a>
+          <a class='nav-link my-3 px-5 btn-outline-light' href='index.php'>Home</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link p-3 my-2 px-5 btn-outline-light' href='index.php?page=about'>About Us</a>
+          <a class='nav-link my-3 px-5 btn-outline-light' href='index.php?page=about'>About Us</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link p-3 my-2 px-5 btn-outline-light' href='index.php?page=contact'>Contact</a>
+          <a class='nav-link my-3 px-5 btn-outline-light' href='index.php?page=contact'>Contact</a>
         </li>
+        <li class='nav-item'>
+          <a class='nav-link my-3 px-5 btn-outline-light' href='index.php?page=vita_trace'>Vita Trace</a>
+
+        </li>
+        <!--
         <li class='nav-item dropdown'>
           <a class="nav-link btn-outline-light dropdown-toggle p-3 my-2 px-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Products
           </a>
-
-          <!-- Dropdown menu which displays all categories-->
+          #Dropdown menu which displays all categories#
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class='dropdown-item' href='index.php?page=products&category=*'>All</a>
-            <a class='dropdown-item' href='index.php?page=products&category=invictus'>Invictus</a>
-            <!--<?php
+            <a class='dropdown-item' href='index.php?page=products&category=vita_trace'>Vita Trace</a>
+            #<?php
 
               //Creates the option in the dropdown that allows you to view all products/books
               echo "<a class='dropdown-item' href='index.php?page=products&category=*'>All</a>";
@@ -55,8 +59,9 @@ also is used to log out. The links displayed will depend on whether you are logg
                 //Creates an option for the dropdown menu that allows the user to view products from that category
                 echo "<a class='dropdown-item' href='index.php?page=products&category=$category_ID'>$category_name</a>";
               }
-            ?>-->
+            ?>#
           </div>
+          -->
         </li>
       </ul>
 
@@ -69,21 +74,24 @@ also is used to log out. The links displayed will depend on whether you are logg
             if ($_SESSION['admin']==1){
               //If they are an admin then a link to the admin section is put in the navbar
               echo "<li class='nav-item dropdown'>
-                <a class='nav-link p-3 my-2 px-4 btn-outline-light' href='index.php?page=adminsection'>Admin</a>
+                <a class='nav-link my-3 px-4 btn-outline-light' href='index.php?page=adminsection'>Admin</a>
               </li>";
             }
             //If a user is logged in then a link to the cart page of the website is added, and a button which logs out the user
             echo "<li class='nav-item dropdown'>
-              <a class='nav-link p-3 my-2 px-4 btn-outline-light' href='index.php?page=map'>Map</a>
+              <a class='nav-link my-3 px-4 btn-outline-light' href='index.php?page=map'>Map</a>
             </li>
             <li class='nav-item dropdown'>
-              <a class='nav-link p-3 my-2 px-4 btn-outline-light' href='index.php?logout=1'>Logout</a>
+              <a class='nav-link my-3 px-4 btn-outline-light' href='index.php?logout=1'>Logout</a>
             </li>";
           }
           //If a user is not logged in then the only link displayed is a link to the login and sign up page on the website
           else{
             echo "<li class='nav-item dropdown'>
-              <a class='nav-link p-3 my-2 px-5 btn-outline-light' href='index.php?page=loginsignup'>Login</a>
+              <a class='nav-link my-3 px-5 btn-outline-light' href='index.php?page=loginsignup'>Login</a>
+            </li>";
+            echo "<li class='nav-item dropdown'>
+              <a class='nav-link my-3 px-5 btn-outline-light' href='index.php?page=oldlogin'>Old Login</a>
             </li>";
           }
          ?>

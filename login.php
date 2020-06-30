@@ -1,41 +1,23 @@
-<?php
-  //Checks whether the user has actually attempted to login
-  if (isset($_POST['login_submit'])){
-
-    //Verifies the user has not logged in already
-    if (session_status() == PHP_SESSION_NONE) {
-
-      //Converts login details from the $_POST array in variables
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-
-      //Cleanses the username input to avoid basic SQL injection
-      $username = mysqli_real_escape_string($dbconnect, $username);
-
-      //This SQL checks the database for user who have the entered username
-      $login_sql = "SELECT * FROM resthome WHERE username='$username'";
-      $login_qry = mysqli_query($dbconnect, $login_sql);
-      if ($login_qry){
-        $login_aa = mysqli_fetch_assoc($login_qry);
-        //Checks if the entered password is that same as the password in the database
-        //The password in the database is encrypted
-        if (password_verify($password, $login_aa['password'])){
-
-          //If a correct username and password are entered then a session is set up containing the user's ID
-          session_start();
-          $_SESSION['user_ID']=$login_aa['userID'];
-          $_SESSION['admin']=$login_aa['admin'];
-          $_SESSION['latCord']=$login_aa['latCord'];
-          $_SESSION['lonCord']=$login_aa['lonCord'];
-
-          //Redirects away from the login page
-          header("Location: index.php");
+  <!--Login section of the page-->
+  <div class="col-12 col-lg-6 my-5 text-center">
+    <h2>Login</h2>
+    <form action="index.php?page=loginsignup" method="post">
+      <input class="login-input" type="text" name="username" placeholder="Username" maxlength="19" required/>
+      <br>
+      <input class="login-input" type="password" name="password" placeholder="Password" maxlength="19" required/>
+      <?php
+        //If feedback message was given by the login.php function then it is displayed
+        if(isset($login_feedback)){
+          echo "$login_feedback";
         }
-        //If entered password does not match or the username doesn't exist then this message is outputted
         else{
-          $login_feedback = "<br><b class='loginSignUpMessage'>Incorrect Username or Password</b>";
+          echo "<br>";
         }
-      }
-    }
-  }
-?>
+      ?>
+      <br>
+      <input class="py-2 px-3 m-2 mr-3 button-style-2" type="submit" name="login" value="Login" />
+      <?php if (!isset($_GET['signup'])){
+        ?><a href="index.php?page=loginsignup&signup=yes"><button type="button" class='py-2 px-3 m-2 mr-3 button-style-2'>Sign Up</button> </><?php
+       } ?>
+    </form>
+  </div>

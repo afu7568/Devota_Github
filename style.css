@@ -1,14 +1,8 @@
 /*General overarching css, used across many pages*/
-* { /*Sets a default font family of Roboto*/
- font-family: 'Roboto Condensed', sans-serif;
-}
 body { /*Creates an unmoving background for the website*/
   margin-top: 90px;
   margin-bottom: 100px;
-  background: url(img/background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(img/background.jpg) no-repeat center fixed;
   background-size: cover;
 }
 .button-style-1{
@@ -38,7 +32,6 @@ body { /*Creates an unmoving background for the website*/
 
 /*navbar related classes*/
 .custom-nav { /*Colors navbar, fixes it to the top of the page, and makes it sit above other content*/
- background-color: rgba(255,255,255,0.6);
  z-index: 100;
  top:0;
 }

@@ -1,58 +1,21 @@
-<?php
-  //Checks if the user has attempted to sign up
-  if (isset($_POST['signup_submit'])){
-
-    //Error catching to prevent blank inputs for username and passwords
-    if ($_POST['newusername'] != '' && $_POST['newpassword'] != '' && $_POST['confirmpassword'] != ''){
-
-      //Error catching to make sure the length of the password and username aren't greater than 20 char
-      if (strlen($_POST['newusername']) < 20 || strlen($_POST['newpassword']) < 20){
-
-        //Error catching to make sure entered passwords are the same
-        if ($_POST['newpassword'] == $_POST['confirmpassword']){
-
-          //Puts entered username into a variable
-          $new_username = $_POST['newusername'];
-          //Cleanses the username inputted to avoid basic SQL injection
-          $new_username = mysqli_real_escape_string($dbconnect, $new_username);
-
-          //Searches the database for accounts with same username
-          $username_check_sql = "SELECT * FROM resthome WHERE username='$new_username'";
-          $username_check_qry = mysqli_query($dbconnect, $username_check_sql);
-          if ($username_check_qry){
-            $username_check_aa = mysqli_fetch_assoc($username_check_qry);
-
-            //Checks that no accounts have the entered username
-            if (!$username_check_aa){
-
-              //The password is hashed for security and the account info is added to the database
-              $new_password = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
-              $signup_sql ="INSERT INTO resthome (userID, username, password, admin)
-              VALUES (NULL, '$new_username', '$new_password', 0)";
-              $signup_qry = mysqli_query($dbconnect, $signup_sql);
-
-              //Message telling the user their account has been set up
-              $signup_feedback = '<br><b class="loginSignUpMessage">Sign Up Successful</b>';
-            }
-            //If the username is already taken then feedback is given to the user
-            else{
-              $signup_feedback = '<br><b class="loginSignUpMessage alert">Username already taken</b>';
-            }
-          }
-        }
-        //Feedback if passwords dont match
-        else{
-          $signup_feedback = '<br><b class="loginSignUpMessage danger">Please reconfirm password</b>';
-        }
+<div class="col-md-12 col-lg-6 my-5 text-center">
+  <h3>Sign Up</h3>
+  <form action="index.php?page=loginsignup" method="post">
+    <input class="login-input" type="text" name="newusername" placeholder="Username" maxlength="19" required/>
+    <br>
+    <input class="login-input" type="password" name="newpassword" placeholder="Password" maxlength="19" required/>
+    <br>
+    <input class="login-input" type="password" name="confirmpassword" placeholder="Confirm Password" maxlength="19" required/>
+    <?php
+      //If feedback message was given by the login.php function then it is displayed
+      if(isset($signup_feedback)){
+        echo "$signup_feedback";
       }
-      //feedback if username or password are too long
       else{
-        $signup_feedback = '<br><b class="loginSignUpMessage danger">Please keep username and password length under 20 characters</b>';
+        echo "<br>";
       }
-    }
-    //Feedback message if inputs are left empty
-    else{
-      $signup_feedback = '<br><b class="loginSignUpMessage alert">Please enter username, password, and confirm that password</b>';
-    }
-  }
-?>
+    ?>
+    <br>
+    <input class="py-2 px-3 m-2 mx-3 button-style-2" type="submit" name="signup" value="Sign Up" />
+  </form>
+</div>
