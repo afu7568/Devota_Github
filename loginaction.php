@@ -1,7 +1,6 @@
 <?php
   //Checks whether the user has actually attempted to login
   if (isset($_POST['login'])){
-
     //Verifies the user has not logged in already
     if (session_status() == PHP_SESSION_NONE) {
 

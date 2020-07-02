@@ -1,8 +1,7 @@
 
 <!-- The Contact Page. This page displays contact information of the website owner (or business running the site)
  and also allows for anyone to contact the owner by through a form where they input their name, email and message-->
-
-<div class='row'>
+<div class='row my-5 py-5'>
   <!-- Page name is displayed -->
   <div class='col-12 text-center'>
     <h2>Contact Us</h2>

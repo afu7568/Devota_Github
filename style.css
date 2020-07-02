@@ -32,17 +32,18 @@ body { /*Creates an unmoving background for the website*/
 
 /*navbar related classes*/
 .custom-nav { /*Colors navbar, fixes it to the top of the page, and makes it sit above other content*/
+ color: rgba(255, 0, 0, 0.5);
  z-index: 100;
  top:0;
 }
 .custom-nav .navbar-brand{
- color: #ffff00;
+ color: #ffffff;
 }
 .custom-nav .navbrand:hover{
  color: #ffffff;
 }
 .nav-link{
- color: rgb(0, 0, 0);
+ color: rgb(170,170,170);
 }
 .nav-link:hover{
  color: rgb(170, 170, 170);

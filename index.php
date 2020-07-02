@@ -19,12 +19,10 @@
     <!-- Required meta tags -->
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-
     <!-- Bootstrap CSS -->
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='style.css'>
-
     <!--Title of the website-->
     <title>Devota</title>
   </head>
@@ -34,17 +32,14 @@
       <?php
         //Includes the navbar, it is present on every page, hence why it is included on the base page
 
-
         //This code checks the $_GET array to determine what page to display, this is a one page website
         if (isset($_GET['page'])){
           $page_name = $_GET['page'];
-
           //Checks if a page with the name in the $_GET array exists
           if (file_exists("$page_name.php") && $_GET['page'] != '%index%'){
             //If the page does exist then it is displayed
             include("$page_name.php");
           }
-
           //If page doesn't exist an error message is displayed
           else{
             include('error404.php');

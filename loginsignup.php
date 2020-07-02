@@ -4,6 +4,8 @@ Having an account for this site is required for purchasin items. This is so that
 added to their cart can have specific references to their acount instead of using methods like cookies. It also
 allows for flexibility in the future by adding in functionallity like remembering past order, user information, etc.-->
 <div class="row">
+  <div class="col-12 my-5 p-3 text-center">
+  </div>
 <?php
     include("loginaction.php");
     include("signupaction.php");

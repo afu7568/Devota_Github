@@ -11,7 +11,7 @@
 .footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
   height: 70px;
   color: black;
@@ -19,10 +19,10 @@
   pointer-events: all;
 }
 </style>
-
 <div class="footer-back">
   <div class="footer">
-    <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+
+    <p><img src="img/fb.png" alt="" width='50px' height="auto" class="mx-2">  |  <img src="img/li.png" alt="" width='50px' height="auto" class="mx-2"> | <img src="img/sh.png" alt="" width='50px' height="auto" class="mx-2">  |  <img src="img/yt.png" alt="" width='50px' height="auto" class="mx-2"> </p>
+
+
 </div>
