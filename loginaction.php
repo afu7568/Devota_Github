@@ -28,7 +28,7 @@
           $_SESSION['lonCord']=$login_aa['lonCord'];
 
           //Redirects away from the login page
-          header("Location:index.php");
+          header("Location: index.php");
         }
         //If entered password does not match or the username doesn't exist then this message is outputted
         else{
