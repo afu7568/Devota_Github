@@ -1,5 +1,5 @@
   <!--Login section of the page-->
-  <div class="col-12 col-lg-6 my-5 text-center">
+  <div class="col-12 col-lg-6  text-center">
     <h2>Login</h2>
     <form action="index.php?page=loginsignup" method="post">
       <input class="login-input" type="text" name="username" placeholder="Username" maxlength="19" required/>

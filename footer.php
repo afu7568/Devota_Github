@@ -13,7 +13,7 @@
   left: 0;
   bottom: 20px;
   width: 100%;
-  height: 70px;
+  height: 40px;
   color: black;
   text-align: center;
   pointer-events: all;
