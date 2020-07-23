@@ -1,4 +1,4 @@
-<div class="col-md-12 col-lg-6  text-center">
+<div class="col-md-12 col-lg-6 text-center">
   <h3>Sign Up</h3>
   <form action="index.php?page=loginsignup" method="post">
     <input class="login-input" type="text" name="newusername" placeholder="Username" maxlength="19" required/>

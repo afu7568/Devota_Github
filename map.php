@@ -3,17 +3,23 @@
 if (session_status() != PHP_SESSION_ACTIVE){
   header("Location: index.php");
 };
-$residentID = $_SESSION['user_ID'];
-$cart_select_sql = "SELECT residentID, name, latCord, lonCord FROM resident WHERE resthomeID=$residentID";
-$cart_select_qry = mysqli_query($dbconnect, $cart_select_sql);
+if ($_SESSION['admin'] == 0){
+  $residentID = $_SESSION['user_ID'];
+  $cart_select_sql = "SELECT residentID, name, latCord, lonCord FROM resident WHERE resthomeID=$residentID";
+  $cart_select_qry = mysqli_query($dbconnect, $cart_select_sql);
+}
+else {
+  $cart_select_sql = "SELECT userID, name, latCord, lonCord FROM resthome";
+  $cart_select_qry = mysqli_query($dbconnect, $cart_select_sql);
+}
 ?>
 
-<h3 class='text-center my-5'>Resthome Name</h3>
+<h3 class='text-center my-5'><?php echo $_SESSION['name'] ?></h3>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqpU9_3Egn7sfsW2CSFlp7H8Ohp0dQ7Hg&sensor=false"></script>
 <script>
   function initialize(){
     var mapProp = {
-      center: new google.maps.LatLng(<?php echo $_SESSION['latCord']?>,<?php echo $_SESSION['lonCord']?>),
+      center: new google.maps.LatLng(40,178),
       zoom:12,
       disableDefaultUI:false,
       mapTypeId: google.maps.MapTypeId.ROADMAP

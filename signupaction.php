@@ -17,7 +17,7 @@
           $new_username = mysqli_real_escape_string($dbconnect, $new_username);
 
           //Searches the database for accounts with same username
-          $username_check_sql = "SELECT * FROM resthome WHERE username='$new_username'";
+          $username_check_sql = "SELECT * FROM resthome WHERE name='$new_username'";
           $username_check_qry = mysqli_query($dbconnect, $username_check_sql);
           if ($username_check_qry){
             $username_check_aa = mysqli_fetch_assoc($username_check_qry);
@@ -27,7 +27,7 @@
 
               //The password is hashed for security and the account info is added to the database
               $new_password = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
-              $signup_sql ="INSERT INTO resthome (userID, username, password, admin)
+              $signup_sql ="INSERT INTO resthome (userID, name, password, admin)
               VALUES (NULL, '$new_username', '$new_password', 0)";
               $signup_qry = mysqli_query($dbconnect, $signup_sql);
 

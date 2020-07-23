@@ -12,7 +12,7 @@
       $username = mysqli_real_escape_string($dbconnect, $username);
 
       //This SQL checks the database for user who have the entered username
-      $login_sql = "SELECT * FROM resthome WHERE username='$username'";
+      $login_sql = "SELECT * FROM resthome WHERE name='$username'";
       $login_qry = mysqli_query($dbconnect, $login_sql);
       if ($login_qry){
         $login_aa = mysqli_fetch_assoc($login_qry);
@@ -23,6 +23,8 @@
           //If a correct username and password are entered then a session is set up containing the user's ID
           session_start();
           $_SESSION['user_ID']=$login_aa['userID'];
+          $_SESSION['name']=$login_aa['name'];
+          $_SESSION['resthome']=$login_aa['resthomeID'];
           $_SESSION['admin']=$login_aa['admin'];
           $_SESSION['latCord']=$login_aa['latCord'];
           $_SESSION['lonCord']=$login_aa['lonCord'];

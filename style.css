@@ -5,6 +5,9 @@ body { /*Creates an unmoving background for the website*/
   background: url(img/background.jpg) no-repeat center fixed;
   background-size: cover;
 }
+a {
+  text-decoration: none;
+}
 .button-style-1{
   background-color: transparent;
   border-radius: 5%;
@@ -32,7 +35,7 @@ body { /*Creates an unmoving background for the website*/
 
 /*navbar related classes*/
 .custom-nav { /*Colors navbar, fixes it to the top of the page, and makes it sit above other content*/
- color: rgba(255, 0, 0, 0.5);
+ background-color: rgba(255,255,255,0.5);
  z-index: 100;
  top:0;
 }
@@ -42,12 +45,7 @@ body { /*Creates an unmoving background for the website*/
 .custom-nav .navbrand:hover{
  color: #ffffff;
 }
-.nav-link{
- color: rgb(170,170,170);
-}
-.nav-link:hover{
- color: rgb(170, 170, 170);
-}
+
 
 /*contact page classes*/
 .message-input{

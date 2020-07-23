@@ -4,7 +4,7 @@ also is used to log out. The links displayed will depend on whether you are logg
 
 <div class="row">
   <!-- Navbar style is set to light as it fit with the style of my site, and allows for the navbar collapse image to be visible-->
-  <nav class='navbar navbar-light navbar-expand-lg col-12 custom-nav position-fixed my-3'>
+  <nav class='navbar navbar-light navbar-expand-lg col-12 position-fixed custom-nav'>
 
     <!--Displays logo-->
     <a class="" href="index.php"><img class='mx-4 ' src="img/logo.png" height="100%" width="50px"></a>
@@ -17,17 +17,17 @@ also is used to log out. The links displayed will depend on whether you are logg
 
       <!--List of navbar items on the left side-->
       <ul class="navbar-nav mr-auto">
-        <li class='nav-item '>
-          <a class='nav-link my-3 px-5 btn-outline-light rounded' href='index.php'>Home</a>
+        <li class='nav-item'>
+          <a class='nav-link py-3 my-2 px-4 btn-outline-light' href='index.php'>Home</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link my-3 px-5 btn-outline-light rounded' href='index.php?page=about'>Our Story</a>
+          <a class='nav-link py-3 my-2  px-4 btn-outline-light' href='index.php?page=about'>Our Story</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link my-3 px-5 btn-outline-light rounded' href='index.php?page=vita_trace'>Vita Trace</a>
+          <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=vita_trace'>Vita Trace</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link my-3 px-5 btn-outline-light rounded' href='index.php?page=contact'>Contact Us</a>
+          <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=contact'>Contact Us</a>
         </li>
       </ul>
 
@@ -40,21 +40,26 @@ also is used to log out. The links displayed will depend on whether you are logg
             if ($_SESSION['admin']==1){
               //If they are an admin then a link to the admin section is put in the navbar
               echo "<li class='nav-item dropdown'>
-                <a class='nav-link my-3 px-4 btn-outline-light rounded' href='index.php?page=adminsection'>Admin</a>
+                <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=adminsection'>Admin</a>
               </li>";
             }
             //If a user is logged in then a link to the cart page of the website is added, and a button which logs out the user
+            else {
+              echo "<li class='nav-item dropdown'>
+                <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=residents'>Residents</a>
+              </li>";
+            }
             echo "<li class='nav-item dropdown'>
-              <a class='nav-link my-3 px-4 btn-outline-light rounded' href='index.php?page=map'>Map</a>
+              <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=map'>Map</a>
             </li>
             <li class='nav-item dropdown'>
-              <a class='nav-link my-3 px-4 btn-outline-light rounded' href='index.php?logout=1'>Logout</a>
+              <a class='nav-link py-3 my-2  px-4 btn-outline-light' href='index.php?logout=1'>Logout</a>
             </li>";
           }
           //If a user is not logged in then the only link displayed is a link to the login and sign up page on the website
           else{
             echo "<li class='nav-item dropdown'>
-              <a class='nav-link my-3 px-5 btn-outline-light rounded' href='index.php?page=loginsignup'>Login</a>
+              <a class='nav-link py-3 my-2  px-4 btn-outline-light ' href='index.php?page=loginsignup'>Login</a>
             </li>";
           }
          ?>
