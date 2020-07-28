@@ -25,10 +25,11 @@ that links to a page where you can add products-->
         //After displaying all products from the database it then displays a blank product that can be click on to add new items to the database
         //This is appropriatly labeled as "New Item"
         echo "<div class='col-12 col-sm-6 col-md-4 col-lg-3 my-3'>
+          <a href='index.php?page=addresident'>
           <div class='col-12 product-background rounded text-center btn-light'>
-            <a href='index.php?page=addproduct'></a>
-            <h4 class='product-title py-4'>New Item</h4>
+            <h4 class='product-title py-4'>Add</h4>
           </div>
+          </a>
         </div>";
         //Loops through every product that was returned by the above query
         while ($admin_search_aa = mysqli_fetch_assoc($admin_search_qry)){

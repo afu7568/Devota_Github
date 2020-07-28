@@ -25,14 +25,6 @@ that links to a page where you can add products-->
     <!--The search bar - used for search for products by name-->
     <div class="row">
       <?php
-        //After displaying all products from the database it then displays a blank product that can be click on to add new items to the database
-        //This is appropriatly labeled as "New Item"
-        echo "<div class='col-12 col-sm-6 col-md-4 col-lg-3 my-3'>
-          <div class='col-12 product-background rounded text-center btn-light'>
-            <a href='index.php?page=addproduct'></a>
-            <h4 class='product-title py-4'>New Item</h4>
-          </div>
-        </div>";
         //Loops through every product that was returned by the above query
         while ($admin_search_aa = mysqli_fetch_assoc($admin_search_qry)){
 
