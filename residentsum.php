@@ -19,7 +19,7 @@
   // checking if user has confirmed delete
   if (isset($_GET['action']) && $_GET['action']=='confirmdelete') {
     //running sql to delete the book from the table
-    $del_sql = "DELETE FROM resident WHERE resident_ID=$resident_ID";
+    $del_sql = "DELETE FROM resident WHERE residentID=$resident_ID";
     $del_qry = mysqli_query($dbconnect,$del_sql);
     header("Location:index.php?page=residents&message=delsuccess");
   }
@@ -41,7 +41,7 @@
         <div class="col text-right">
           <?php
           //displays all the book info
-          echo "<img src='img/$img' alt='resident photo' class='img-fluid img-thumbnail' width= '200px'>";
+          echo "<img src='img/profPictures/$img' alt='resident photo' class='img-fluid img-thumbnail' width= '200px'>";
             ?>
         </div>
           <div class="col-6 my-2 text-left">
@@ -50,7 +50,7 @@
           echo "<p class='ml-2 mt-0'>Room Number: $room_number</p>";
           echo "<p class='ml-2 mt-0'>Current Location: $latcord , $loncord</p>";
           echo "<p class='ml-2'>$other</p>";
-          echo "<a href='index.php?page=residentsum&resident=$resident_ID'><button type='button' class='py-2 px-3 m-2 mr-3 button-style-2'>Edit</button></a>";
+          echo "<a href='index.php?page=editresident&resident=$resident_ID'><button type='button' class='py-2 px-3 m-2 mr-3 button-style-2'>Edit</button></a>";
             if (isset($_GET['action']) && $_GET['action']=='delete') {
                 echo "<a href='index.php?page=residentsum&resident=$resident_ID&action=confirmdelete'><button type='button' class='py-2 px-3 m-2 mr-3 button-style-2'>Confirm Delete</button></a>";
                 echo "<a href='index.php?page=residentsum&resident=$resident_ID'><button type='button' class='py-2 px-3 m-2 mr-3 button-style-2'>Cancel</button></a>";
