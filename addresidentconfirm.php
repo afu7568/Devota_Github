@@ -44,8 +44,6 @@ else {
     		// Check if $uploadOk is set to 0 by an error
     		if ($uploadOk == 0) {
           $_SESSION['addresident']['residentcover']='noimage.png';
-          $feedback = "Sorry, there was an error uploading your file.";
-          $_SESSION['addresident']['residentcover']='noimage.png';
     			// if everything is ok, try to upload file
     		}
         else {

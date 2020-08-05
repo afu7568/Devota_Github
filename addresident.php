@@ -20,7 +20,7 @@
 	<h4>Enter details for new resident</h4>
 	<!--Input form for admin to input details for new resident-->
 	<!--Uses the sessions for the value so if they came back from the confirm page it would have the same inputs from before-->
-	<form method="post" action="index.php?page=addresidentConfirm" enctype="multipart/form-data">
+	<form method="post" action="index.php?page=addresidentconfirm" enctype="multipart/form-data">
 		<p>Name: <input type="text" name="name" value="<?php echo $_SESSION['addresident']['name']; ?>" required /></p>
 		<p>Photo: <input type="file" name="fileToUpload" id="fileToUpload" /></p>
 		<p>Room Number: <input type="text" name="roomNumber" value="<?php echo $_SESSION['addresident']['roomNumber']; ?>" required/></p>
