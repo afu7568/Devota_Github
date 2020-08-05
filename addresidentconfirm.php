@@ -1,4 +1,3 @@
-<h1>hello</h1>
 <?php
 //makes sure that something has been posted and someone hasn't forcefully come to this page through the URL
 if(isset($_POST['addresident'])) {
