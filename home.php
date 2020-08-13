@@ -1,9 +1,9 @@
 <!-- The Home Page. This is the default page displayed on the website. Shows the website's branding,
  slogan, and gives links to the login and sign up page.-->
 
-<div class='row my-5'>
+<div class='row'>
   <!-- The websites logo, name, and slogan -->
-  <div class='col-12 mt-5 text-center'>
+  <div class='col-12 mt-3 text-center'>
     <img src='img/logo.png' height='100%' width='250px'>
     <br>
   </div>
