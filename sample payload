@@ -1,0 +1,37 @@
+{
+  "Time": "2016-08-26T17:05:25.178+02:00",
+  "DevEUI": "0018B20000000713",
+  "FPort": "2",
+  "FCntUp": "2",
+  "ADRbit": "1",
+  "MType": "4",
+  "FCntDn": "2",
+  "payload_hex": "2d34332e3438303232302c203137322e353538313237",
+  "mic_hex": "0a4db043",
+  "Lrcid": "00000127",
+  "LrrRSSI": "-29.000000",
+  "LrrSNR": "8.750000",
+  "SpFact": "12",
+  "SubBand": "G1",
+  "Channel": "LC1",
+  "DevLrrCnt": "3",
+  "Lrrid": "33D13A41",
+  "Late": "0",
+  "Lrrs": {
+    "Lrr": {
+      "Lrrid": "68BA4840",
+      "Chain": "0",
+      "LrrRSSI": "-117.000000",
+      "LrrSNR": "-8.000000",
+      "LrrESP": "-125.638924"
+    }
+  },
+  "CustomerID": "100000135",
+  "CustomerData": "{\"alr\":{\"pro\":\"ADRF/DEMO\",\"ver\":\"1\"}}",
+  "ModelCfg": "0",
+  "DevAddr": "04000170",
+  "payload": {
+    "time": "20:14:35",
+    "data": 23.2
+  }
+}

@@ -54,8 +54,8 @@ that links to a page where you can add products-->
           $residentID = $admin_search_aa['residentID'];
           $img = $admin_search_aa['img'];
           $username = $admin_search_aa['name'];
-          $latCord = $admin_search_aa['latCord'];
-          $lonCord = $admin_search_aa['lonCord'];
+          $latCord = $admin_search_aa['latitude'];
+          $lonCord = $admin_search_aa['longitude'];
           //checks if there is a photo
           if ($img=='') {
             //if not then it just uses a default image
