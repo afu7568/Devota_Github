@@ -12,6 +12,7 @@ else {
   $resident_select_sql = "SELECT * FROM resthome";
   $resident_select_qry = mysqli_query($dbconnect, $resident_select_sql);
 }
+header("refresh:5");
 ?>
 <div class="row">
 <h3 class='text-center'><?php echo $_SESSION['name'] ?></h3>
@@ -30,11 +31,12 @@ else {
         while ($resident_select_aa = mysqli_fetch_assoc($resident_select_qry)){
           $device_ID = $resident_select_aa['device_ID'];
           $gps_select_sql = "SELECT latitude, longitude 
-          FROM gps 
-          WHERE device_ID = $device_ID
-          ORDER BY time_stamp DESC LIMIT 1";
+                            FROM gps 
+                            WHERE device_ID = '$device_ID'
+                            ORDER BY time_stamp DESC LIMIT 1";
           $gps_select_qry = mysqli_query($dbconnect, $gps_select_sql);
-          while ($gps_select_aa = mysqli_fetch_assoc($gps_select_qry)){
+
+          do {
             $latCord = $gps_select_aa['latitude'];
             $lonCord = $gps_select_aa['longitude'];
             $name = $resident_select_aa['name'];
@@ -45,7 +47,7 @@ else {
             title: '$name'});
             marker.setMap(map);
             ";
-          }
+          } while ($gps_select_aa = mysqli_fetch_assoc($gps_select_qry));
         }
       }
       else{
