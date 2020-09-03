@@ -12,7 +12,6 @@ else {
   $resident_select_sql = "SELECT * FROM resthome";
   $resident_select_qry = mysqli_query($dbconnect, $resident_select_sql);
 }
-header("refresh:5");
 ?>
 <div class="row">
 <h3 class='text-center'><?php echo $_SESSION['name'] ?></h3>
