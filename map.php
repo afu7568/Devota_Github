@@ -12,7 +12,7 @@ else {
   $resident_select_sql = "SELECT * FROM resthome";
   $resident_select_qry = mysqli_query($dbconnect, $resident_select_sql);
 }
-header("refresh:5");
+
 ?>
 <div class="row">
 <h3 class='text-center'><?php echo $_SESSION['name'] ?></h3>
@@ -36,7 +36,7 @@ header("refresh:5");
                             ORDER BY time_stamp DESC LIMIT 1";
           $gps_select_qry = mysqli_query($dbconnect, $gps_select_sql);
 
-          do {
+          do{
             $latCord = $gps_select_aa['latitude'];
             $lonCord = $gps_select_aa['longitude'];
             $name = $resident_select_aa['name'];
