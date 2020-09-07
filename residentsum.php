@@ -5,7 +5,7 @@
   }
   $resident_ID = $_GET['resident'];
   //query to get all the info from the genre and book tables based on the book_ID from the book get arrray
-  $sum_sql = "SELECT * FROM resident WHERE residentID=$resident_ID";
+  $sum_sql = "SELECT * FROM resident LEFT JOIN gps ON resident.device_ID = gps.device_ID WHERE resident.residentID=$resident_ID";
   $sum_qry = mysqli_query($dbconnect,$sum_sql);
   $sum_aa = mysqli_fetch_assoc($sum_qry);
   //sets all the information from the query above as variables for easier access later
@@ -13,9 +13,11 @@
   $img = $sum_aa['img'];
   $room_number = $sum_aa['roomNumber'];
   $location_status = $sum_aa['locationStatus'];
-  $latcord = $sum_aa['latCord'];
-  $loncord = $sum_aa['lonCord'];
+  $latcord = $sum_aa['latitude'];
+  $loncord = $sum_aa['longitude'];
   $other = $sum_aa['other'];
+
+
   // checking if user has confirmed delete
   if (isset($_GET['action']) && $_GET['action']=='confirmdelete') {
     //running sql to delete the book from the table

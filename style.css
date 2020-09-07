@@ -57,18 +57,17 @@ a {
   border-radius: 1%;
   color: rgb(80, 80, 80);
 }
-/*products page classes*/
-.product-background{
+/*residents page classes*/
+.resident-background{
   background-color: rgb(255, 255, 255);
-  height: 320px;
-  opacity: 0.8;
+  min-height: 320px;
 }
-.product-title{
+.resident-title{
   overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-.product-info{
+.resident-info{
   overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;

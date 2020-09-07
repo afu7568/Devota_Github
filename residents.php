@@ -54,22 +54,18 @@ that links to a page where you can add products-->
           $residentID = $admin_search_aa['residentID'];
           $img = $admin_search_aa['img'];
           $username = $admin_search_aa['name'];
-          $latCord = $admin_search_aa['latitude'];
-          $lonCord = $admin_search_aa['longitude'];
           //checks if there is a photo
           if ($img=='') {
             //if not then it just uses a default image
             $img='noimage.png';
           }
 
-          //Displays the products information in a format. The cover links to a page that can eb sued to delete the product (and possibly edit later on)
+          //Displays the resident information in a format. The cover links to a page that can eb sued to delete the product (and possibly edit later on)
           echo "<div class='col-12 col-sm-6 col-md-4 col-lg-3 my-3'>
               <a href='index.php?page=residentsum&resident=$residentID'>
                 <div class='col-12 product-background rounded text-center btn-light'>
                 <img src='img/profPictures/$img' alt='resident photo' class='img-fluid img-thumbnail mt-4' width= '60%'>
-                  <h4 class='product-title'>$username</h4>
-                  <p class='product-info'>Latitude: $latCord</p>
-                  <p class='product-info'>Longitude: $lonCord</p>
+                  <h4 class='name'>$username</h4>
                 </div>
               </a>
             </div>";

@@ -36,7 +36,7 @@ else {
                             ORDER BY time_stamp DESC LIMIT 1";
           $gps_select_qry = mysqli_query($dbconnect, $gps_select_sql);
 
-          do{
+          while ($gps_select_aa = mysqli_fetch_assoc($gps_select_qry)){
             $latCord = $gps_select_aa['latitude'];
             $lonCord = $gps_select_aa['longitude'];
             $name = $resident_select_aa['name'];
@@ -47,7 +47,7 @@ else {
             title: '$name'});
             marker.setMap(map);
             ";
-          } while ($gps_select_aa = mysqli_fetch_assoc($gps_select_qry));
+          } 
         }
       }
       else{
