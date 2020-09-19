@@ -5,9 +5,7 @@ body { /*Creates an unmoving background for the website*/
   background: url(img/background.jpg) no-repeat center fixed;
   background-size: cover;
 }
-a {
-  text-decoration: none;
-}
+
 .button-style-1{
   background-color: transparent;
   border-radius: 5%;
@@ -34,16 +32,27 @@ a {
 }
 
 /*navbar related classes*/
+.navbar-bg {
+  background-image: linear-gradient(rgb(228, 93, 93), rgba(255,255,255,0));
+}
 .custom-nav { /*Colors navbar, fixes it to the top of the page, and makes it sit above other content*/
- background-color: rgba(255,255,255,0.5);
  z-index: 100;
  top:0;
 }
-.custom-nav .navbar-brand{
- color: #ffffff;
+.link-style{
+  background-color: transparent;
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
 }
-.custom-nav .navbrand:hover{
- color: #ffffff;
+
+.link-style:hover{
+  border-radius: 3px;
+  background:rgba(255, 255, 255, 0.74);
+  color:black;
 }
 
 

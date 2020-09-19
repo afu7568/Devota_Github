@@ -1,4 +1,4 @@
-<div class="col-md-12 col-lg-6 text-center">
+<div class="col-md-12 col-lg-6 my-2 text-center">
   <h3>Sign Up</h3>
   <form action="index.php?page=loginsignup" method="post">
     <input class="login-input" type="text" name="newusername" placeholder="Username" maxlength="19" required/>
@@ -15,7 +15,6 @@
         echo "<br>";
       }
     ?>
-    <br>
     <input class="py-2 px-3 m-2 mx-3 button-style-2" type="submit" name="signup" value="Sign Up" />
   </form>
 </div>
