@@ -1,13 +1,12 @@
  
 <!-- The Navbar. This is displayed on every page and contains navigation links to almost every part of the site
 also is used to log out. The links displayed will depend on whether you are logged in or not, i.e. providing access to admin section if you are admin-->
-
-<div class="row">
+<div class="row mt-5">
   <!-- Navbar style is set to light as it fit with the style of my site, and allows for the navbar collapse image to be visible-->
-  <nav class='navbar  navbar-expand-lg col-12 position-fixed custom-nav navbar-bg'>
+  <nav class='navbar  navbar-expand-xl col-12 position-fixed custom-nav navbar-bg'>
 
     <!--Displays logo-->
-    <a class="" href="index.php"><img class='mx-4' src="img/logo.png" height="100%" width="50px"></a>
+    <a class="" href="index.php"><img class='mx-4' src="img/log.png" height="100%" width="50px"></a>
 
     <!--Collapsing navbar so that the website is responsive for different device sizes-->
     <button class="navbar-toggler navbar-light"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

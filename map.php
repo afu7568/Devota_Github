@@ -15,7 +15,9 @@ else {
 
 ?>
 <div class="row">
-<h3 class='text-center'><?php echo $_SESSION['name'] ?></h3>
+<div class='col-12'>
+<h2 class='text-center '><?php echo $_SESSION['name'] ?></h2>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOVimkgTO9qca4suI9LiOe8bd7nKP5G9g&sensor=false&region=NZ"></script>
 <script>
   function initialize(){
@@ -67,6 +69,6 @@ else {
     ?>}
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<div id="googleMap" class='col-7 mx-5' style="height:500px;float:right;border-radius:15px;"></div>
+<div id="googleMap" class='col-8 mx-auto my-3  map-style' ></div>
 
 </div>

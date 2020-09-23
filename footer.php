@@ -4,8 +4,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 300px;
-  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  height: 150px;
+  background-image: linear-gradient(rgba(255,255,255,0), rgb(93, 174, 228));
   pointer-events: none;
 }
 .footer {

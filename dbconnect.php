@@ -1,6 +1,6 @@
 <?php
 //localhost database connection
-//$dbconnect = mysqli_connect("localhost", "root", "", "Devota");
+$dbconnect = mysqli_connect("localhost", "root", "", "Devota");
 //online database connection
-$dbconnect = mysqli_connect("localhost", "dssrrgxqyr", "5Rgn5WBS7k", "dssrrgxqyr");
+//$dbconnect = mysqli_connect("localhost", "dssrrgxqyr", "5Rgn5WBS7k", "dssrrgxqyr");
  ?>
