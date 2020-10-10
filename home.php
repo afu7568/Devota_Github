@@ -4,7 +4,7 @@
 <div class='row py-5'>
   <!-- The websites logo, name, and slogan -->
   <div class='col-12 mt-5 pt-5 text-center'>
-    <img src='img/full_logo.png' height='100%' width='400px'>
+    <img src='img/full_logo.png' class="full_logo">
     <br>
   </div>
   <div class='col-md-2 col-lg-3'></div>

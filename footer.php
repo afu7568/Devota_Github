@@ -21,8 +21,6 @@
 </style>
 <div class="footer-back">
   <div class="footer">
-
-    <p><img src="img/fb.png" alt="" width='50px' height="auto" class="mx-2">  |  <img src="img/li.png" alt="" width='50px' height="auto" class="mx-2"> | <img src="img/sh.png" alt="" width='50px' height="auto" class="mx-2">  |  <img src="img/yt.png" alt="" width='50px' height="auto" class="mx-2"> </p>
-
+    <p><img src="img/fb.png" alt="" width='40px' height="auto" class="mx-2">  |  <img src="img/li.png" alt="" width='40px' height="auto" class="mx-2"> | <img src="img/sh.png" alt="" width='40px' height="auto" class="mx-2">  |  <img src="img/yt.png" alt="" width='40px' height="auto" class="mx-2"> </p>
 
 </div>

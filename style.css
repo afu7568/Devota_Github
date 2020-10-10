@@ -1,13 +1,15 @@
 /*General overarching css, used across many pages*/
-h2{
-  font-family: 'Montserrat', sans-serif;
-}
+
 body { /*Creates an unmoving background for the website*/
   margin-top: 90px;
   margin-bottom: 100px;
   background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 200%;
 }
-
+p{
+  font-size: 2vw;
+}
 .button-style-1{
   background-color: transparent;
   border-radius: 5%;
@@ -42,6 +44,7 @@ body { /*Creates an unmoving background for the website*/
 .custom-nav { /*Colors navbar, fixes it to the top of the page, and makes it sit above other content*/
  z-index: 100;
  top:0;
+ color: black;
 
 }
 .link-style{
@@ -126,4 +129,44 @@ body { /*Creates an unmoving background for the website*/
 }
 .remove_button:hover {
   color: rgb(150, 150, 150);
+}
+.full_logo{
+  height: auto;
+  width: 30%;
+}
+
+@media screen and (max-width: 1200px) {
+  .full_logo{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  p{
+    font-size: 2vw;
+  }
+  .full_logo{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+
+  .full_logo{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  p{
+    font-size: 4vw;
+  }
+  .full_logo{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
+  p{
+    font-size: 5vw;
+  }
+  .full_logo{
+    width: 80%;
+  }
 }

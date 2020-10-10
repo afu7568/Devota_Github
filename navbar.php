@@ -3,14 +3,14 @@
 also is used to log out. The links displayed will depend on whether you are logged in or not, i.e. providing access to admin section if you are admin-->
 <div class="row mt-5">
   <!-- Navbar style is set to light as it fit with the style of my site, and allows for the navbar collapse image to be visible-->
-  <nav class='navbar  navbar-expand-xl col-12 position-fixed custom-nav navbar-bg'>
+  <nav class='navbar navbar-expand-xl col-12 position-fixed custom-nav navbar-bg'>
 
     <!--Displays logo-->
     <a class="" href="index.php"><img class='mx-4' src="img/log.png" height="100%" width="50px"></a>
 
     <!--Collapsing navbar so that the website is responsive for different device sizes-->
     <button class="navbar-toggler navbar-light"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon navbar-light "></span>
+    <span class="navbar-toggler-icon navbar navbar-dark"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -20,7 +20,7 @@ also is used to log out. The links displayed will depend on whether you are logg
           <a class='nav-link my-3 px-4 link-style' href='index.php'>Home</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link my-3  px-4 link-style' href='index.php?page=about'>Our Story</a>
+          <a class='nav-link my-3  px-4 link-style' href='index.php?page=about'>About Us</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link my-3  px-4 link-style' href='index.php?page=vita_trace'>Vita Trace</a>
@@ -58,7 +58,7 @@ also is used to log out. The links displayed will depend on whether you are logg
           //If a user is not logged in then the only link displayed is a link to the login and sign up page on the website
           else{
             echo "<li class='nav-item dropdown'>
-              <a class='nav-link my-3  px-4 link-style ' href='index.php?page=loginsignup'>Login</a>
+              <a class='nav-link my-3  px-4 link-style' href='index.php?page=loginsignup'>Login</a>
             </li>";
           }
          ?>
