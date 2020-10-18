@@ -64,7 +64,7 @@ else {
         <p class="text-danger"><?php echo $feedback ?></p>
       </div>
       <div class="col mt-5">
-        <h1>Confirm resident details</h1>
+        <h2>Confirm resident details</h2>
         <p>Name: <?php echo $_SESSION['addresident']['name']; ?></p>
         <p>Room Number: <?php echo $_SESSION['addresident']['roomNumber']; ?></p>
         <p>Other Information: </p>
@@ -80,10 +80,10 @@ else {
 
       </div>
       <div class="col">
-        <a href="index.php?page=addresident" class="btn btn-primary">Go back</a>
+        <a href="index.php?page=addresident" class="p-2 mr-2 button-style-2">Go back</a>
         <?php if ($uploadOk == 1){
           ?>
-          <a href="index.php?page=residents&message=addsuccess" class="btn btn-primary">Confirm</a>
+          <a href="index.php?page=residents&message=addsuccess" class="p-2 ml-2 button-style-2">Confirm</a>
           <?php
         } ?>
 

@@ -26,7 +26,7 @@
 		<p>Room Number: <input type="text" name="roomNumber" value="<?php echo $_SESSION['addresident']['roomNumber']; ?>" required/></p>
 		<p>Other Information: </p>
 		<p><input type="text" name="other" value="<?php echo $_SESSION['addresident']['other']; ?>" required/></p>
-		<input type="submit" name="addresident" value="Submit" class="btn btn-primary" />
+		<input type="submit" name="addresident" value="Submit" class="p-2 button-style-2" />
 	</form>
   <p></p>
   <p><a href="index.php?page=residents"><< Back to list</a></p>

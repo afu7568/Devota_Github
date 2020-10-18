@@ -6,9 +6,6 @@ body { /*Creates an unmoving background for the website*/
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
 }
-p{
-  font-size: 2vw;
-}
 .button-style-1{
   background-color: transparent;
   border: 2px solid rgb(0, 0, 0);
@@ -135,9 +132,6 @@ p{
   }
 }
 @media screen and (max-width: 1000px) {
-  p{
-    font-size: 2vw;
-  }
   .full_logo{
     width: 50%;
   }
@@ -148,9 +142,6 @@ p{
   }
 }
 @media screen and (max-width: 600px) {
-  p{
-    font-size: 4vw;
-  }
   .full_logo{
     width: 70%;
   }
