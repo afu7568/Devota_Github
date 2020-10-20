@@ -32,10 +32,8 @@ $data = file_get_contents("php://input");
 $data = json_decode($data);
 //extracting the information needed from the array (devEUI and payload-hex)
 $DevEUI = $data->dev_id;
-$payload_hex = $data->$payload_hex;
-$payload_ASCII = hex2bin($payload_hex);
-//look up the php equivalent of .split (use sscanf for now)
-sscanf($payload_ASCII,"%f,%f",$lat,$long);
+$lat = $data->payload_fields->gps_1->latitude;
+$long = $data->payload_fields->gps_1->longitude;
 //setting up time recieved stuff
 date_default_timezone_set('UTC');
 $date_time = date('Y-m-d H:i:s');
