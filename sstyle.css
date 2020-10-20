@@ -4,7 +4,6 @@ body { /*Creates an unmoving background for the website*/
   margin-top: 90px;
   margin-bottom: 100px;
   background: url(img/old.jpg) ;
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
