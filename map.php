@@ -22,8 +22,8 @@ else {
 <script>
   function initialize(){
     var mapProp = {
-      center: new google.maps.LatLng(-43.5320, 172.6397),
-      zoom:10,
+      center: new google.maps.LatLng(-43.516757, 172.632937),
+      zoom:12,
       disableDefaultUI:false,
       mapTypeId: 'terrain'
     };
