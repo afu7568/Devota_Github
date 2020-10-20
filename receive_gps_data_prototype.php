@@ -39,6 +39,7 @@ date_default_timezone_set('UTC');
 $date_time = date('Y-m-d H:i:s');
 $DevEUI_check_sql = "SELECT * FROM devices WHERE DevEUI ='$DevEUI'";
 $DevEUI_check_qry = mysqli_query($dbconnect, $DevEUI_check_sql);
+//checking if this device has been register in the database before
 if ($DevEUI_check_qry){
     $DevEUI_check_aa = mysqli_fetch_assoc($DevEUI_check_qry);
     if (!$DevEUI_check_aa){
@@ -55,6 +56,10 @@ if ($DevEUI_check_qry){
 }
 $gps_sql = "INSERT INTO gps ( device_ID, latitude, longitude, time_stamp) VALUES ($device_ID, $lat, $long, '$date_time')";
 $gps_qry = mysqli_query($dbconnect, $gps_sql);
-//checking if this device has been register in the database before
 
+
+
+
+//debugging - seeing what information the data is recieving
+echo "$data";
 ?>
