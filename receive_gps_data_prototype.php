@@ -57,13 +57,7 @@ if ($DevEUI_check_qry){
 $gps_sql = "INSERT INTO gps ( device_ID, latitude, longitude, time_stamp) VALUES ($device_ID, $lat, $long, '$date_time')";
 
 $gps_qry = mysqli_query($dbconnect, $gps_sql);
-// the message
 
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($gps_qry,70);
-
-// send email
-mail("afu7568@gmail.com","My subject",$gps_sql);
 ?>
 
 <body>
