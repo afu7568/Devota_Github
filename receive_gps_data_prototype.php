@@ -68,6 +68,6 @@ mail("afu7568@gmail.com","My subject",$gps_sql);
 
 <body>
     <?php
-    echo "$lat + $long";
+    echo "$gps_sql";
     ?>
 </body>
