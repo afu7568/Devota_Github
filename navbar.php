@@ -22,9 +22,7 @@ also is used to log out. The links displayed will depend on whether you are logg
         <li class='nav-item'>
           <a class='nav-link my-3  px-4 link-style' href='index.php?page=about'>About Us</a>
         </li>
-        <li class='nav-item'>
-          <a class='nav-link my-3  px-4 link-style' href='index.php?page=vita_trace'>Vita Trace</a>
-        </li>
+
         <li class='nav-item'>
           <a class='nav-link my-3  px-4 link-style' href='index.php?page=contact'>Contact Us</a>
         </li>
